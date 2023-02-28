@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+      <h1 class="fw-bold p-2 col-6 text-center rounded-pill mt-5 mb-4">Memory Game</h1>
+  </div>
+
+  <div class="row justify-content-center mt-4 menu">
+    <div class="col-4">
+      <label for="user-name" class="form-label fw-bold ">First name:</label>
+      <input type="text" class="form-control" id="user-name" placeholder="Please enter your first name">
+      <div id="error-messages"></div>
+    </div>
+  </div>
+
+    <!--all the buttes-->
+    <div class="menu row justify-content-center mb-3">
+      <div class="col-4">
+        <button type="button" class="btn btn-menu col-12 fw-bold mt-4" id="playBtn">Play</button>
+
+        <button type="button" class="btn btn-menu col-12 mt-3 fw-bold" id="high-scores"
+                data-bs-toggle="modal" data-bs-target="#exampleModal">High Scores</button>
+
+        <button type="button" class="btn btn-menu col-12 mt-3 fw-bold" id="settingsBtn"
+                data-bs-toggle="collapse" data-bs-target="#collapseSetting" aria-expanded="false"
+                aria-controls="collapseSetting">Setting</button>
+
+        <button type="button" class="btn btn-menu col-12 mt-3 fw-bold" id="information"
+                data-bs-toggle="collapse" data-bs-target="#collapseInformation" aria-expanded="false"
+                aria-controls="collapseInformation"
+                >Information</button>
+      </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Game Scores</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class ="modal-body"  id="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="menu row justify-content-center fw-bold collapse" id="collapseInformation">
+    <p class="col-6">Click on the cards to flip them and find the
+      matching pairs with as little flips as possible.<br></p>
+  </div>
+
+  <div class="menu collapse" id="collapseSetting">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <div class="row mb-2">
+          <div class="col-6">
+            <label for="NumberOfRow" class="form-label fw-bold">Number of rows:</label>
+            <select class="form-select form-control-sm" aria-label=".form-control-sm example" id="NumberOfRow">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <div class="col-6">
+            <label for="NumberOfCols" class="form-label fw-bold">Number of cols:</label>
+            <select class="form-select form-control-sm" aria-label=".form-control-sm example" id="NumberOfCols">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+              <option value="5">5</option>
+            </select>
+           </div>
+        </div>
+
+        <div class="mb-1">
+          <label for="DelayInSeconds" class="form-label fw-bold">Delay(in seconds):</label>
+          <select class="form-select form-control-sm" aria-label=".form-control-sm example" id="DelayInSeconds">
+            <option value="0.5">0.5</option>
+            <option value="1" selected>1</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="game">
+    <h5 id="steps-counter" class="text-center fw-bold mb-2">
+      Steps: <span id="number-of-steps">0</span>
+    </h5>
+     <div id="board" class="row justify-content-center"></div>
+    <div class="row justify-content-center">
+      <button type="button" class="fw-bold btn btn-primary col-2 mt-2" id="back-btn">Back</button>
+    </div>
+  </div>
+
+  <div class="row justify-content-center" id="game-over">
+    <div class="col-12">
+      <h1 class="my-4 text-center" id="game-over-h1">Game Over!</h1>
+      <p>Number of cards played: <span id="cardPlayed">0</span></p>
+      <p>Score: <span id="score"></span> <span id="rank-massage"></span></p>
+      <table class ="table" id="table">
+      </table>
+      <button type="button" class="fw-bold btn mt-4" id="ok-btn">Ok</button>
+    </div>
+  </div>
+  <footer class="fw-bold mt-5 mb-2">Created by Liron Almog</footer>
+</div>
+
+
+<script src="./memoryGame.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script></script>
+</body>
+</html>

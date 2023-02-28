@@ -1,0 +1,35 @@
+body {
+    background-color: #3A98B9;
+}
+h1 {
+    background-color:#FFF1DC;
+    color: #61481C;
+}
+.btn-menu{
+    background-color:#FFF1DC;
+    color: #735F32;
+}
+#game-over-h1{
+    background-color: #3A98B9;
+    color: #850000;
+}
+#ok-btn, #back-btn{
+    background-color:#FFF1DC;
+    color: #850000;
+}
+#steps-counter{
+    font-size: 20px;
+}
+.cardd{
+  background-color: #3A98B9;
+    border: none;
+    width: 120px;
+    height: 120px;
+
+}
+
+
+/*3A98B9*/
+/* FFF1DC*/
+/* E8D5C4*/
+/* EEEEEE*/
