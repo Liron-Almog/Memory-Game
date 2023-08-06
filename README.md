@@ -23,12 +23,6 @@ The objective of the game is to find all the matching pairs of cards in the leas
 - A move counter to keep track of the number of moves made by the player.
 - A congratulations message when the game is successfully completed.
 
-## Technologies Used
-
-- HTML: Markup for the game layout and structure.
-- CSS: Styling and layout of the game elements.
-- JavaScript: Logic and interactivity of the game.
-- 
 # Menu page
 
 ![Menu page](https://user-images.githubusercontent.com/100926289/221930574-a99ef7a1-1966-4e01-9472-47bf7af5f3aa.png)
